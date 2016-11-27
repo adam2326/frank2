@@ -30,7 +30,7 @@ def landing_page():
 	user = users.get_current_user()
 
 	if user:
-		nickname = users.nickname()
+		nickname = user.nickname()
 		return redirect(url_for('user_summary_page', nickname=nickname))
 	else:
 		login_logout_url = users.create_login_url('/')
