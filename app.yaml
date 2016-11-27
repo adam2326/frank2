@@ -1,0 +1,22 @@
+application: cloud-training-
+api_version: alpha003
+runtime: python27
+version: 1
+threadsafe: true
+
+handlers:
+- url: /user/.*
+  script: main.app
+  login: required
+  secure: always
+
+handlers:
+- url: /.*/add_opportunity
+  script: main.app
+  login: required
+  secure: always
+
+- url: /.*
+  script: main.app
+  login: required
+  secure: always
