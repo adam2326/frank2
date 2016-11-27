@@ -55,7 +55,7 @@ def user_summary_page(nickname):
 		login_logout_url = users.create_logout_url('/')
 
 		# binding condition: if current user is requesting their page allow; else redirect
-		if nickname = user.nickname():
+		if nickname == user.nickname():
 			return render_template('user_summary_page.html', nickname=nickname, login_logout_url=login_logout_url)
 		else:
 			flash('You are not authorized to view this page.')
