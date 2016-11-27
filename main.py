@@ -46,7 +46,7 @@ def landing_page():
 #
 #################################################################################
 
-@app.route('/user/<nickname>', methods=['GET'])
+@app.route('/user/<nickname>', methods=['GET','POST'])
 def user_summary_page(nickname):
 	user = users.get_current_user()
 	date = datetime.date.today()
